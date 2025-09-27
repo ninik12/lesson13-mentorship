@@ -109,8 +109,8 @@ console.log(conditionResult);
 
 
 //prompt function
-let promptResult =Number(prompt("enter your age")) ;
-console.log(promptResult);
+// let promptResult =Number(prompt("enter your age")) ;
+// console.log(promptResult);
 
 // if (promptResult % 2 === 0){
 //     console.log('luwi');
@@ -122,14 +122,138 @@ console.log(promptResult);
  
 
 
-if (promptResult % 2 === 1){
-    console.log('kenti');
+// if (promptResult % 2 === 1){
+//     console.log('kenti');
     
-}else{
-    console.log('luwi');
+// }else{
+//     console.log('luwi');
     
+// }
+
+// let promptCondition = promptResult % 2 === 0 ? "luwi" : "kenti"
+// console.log(promptCondition);
+
+
+
+var income = 500
+if (income < 200){
+    console.log('below average salary');
+} else if (income >= 200 && income <= 400){
+    console.log('average salary');
+} else {
+    console.log("pretty good salary");
 }
 
-let promptCondition = promptResult % 2 === 0 ? "luwi" : "kenti"
-console.log(promptCondition);
+var income = 300;
+switch (income) {
+    case 100 : console.log('income is 100$');
+    break;
+    case 200 : console.log('income is 200$');
+    break;
+    case 300 : console.log('income is 300$');
+    break;
+}
 
+//ternery operator
+// var a = 1
+// let b = 2
+
+// if (a < b){
+//     console.log(a + b);
+// }else {
+//     a - b
+// }
+
+// let result = a < b ? a + b : a - b;
+// console.log(result);
+
+// let num = 1;
+// do{
+//     console.log(num * num);
+//     num++;
+// }while (num < 10) 
+
+
+//     function display(){
+//         document.write("this is our first function")
+//     }
+//     // display()
+
+//     let number1Function = function(){
+//         document.write("js function")
+//     }
+//     number1Function()
+
+//     function goodMorning(){
+//         document.write("good morning")
+//     }
+//     function goodEvening(){
+//         document.write("good evening")
+//     }
+
+//     let message1 = goodMorning
+//     message1()
+//     let message2 = goodEvening
+//     message2()
+
+
+// function display(x){
+//     let z = x * x;
+//     document.write(x + " " + "square equals" + " " + z)
+// } 
+// display(5)
+
+// let numArray = [1, 2, 3, 4, 5, 6, 7]
+// function calculate(x){
+//     let result =x * x;
+//     console.log(result);
+// }
+// numArray.forEach((element)=> calculate(element))
+// for (let el of numArray){
+//     calculate(el)
+// }
+
+// let y = 5;
+// let z = square(y)
+
+// document.write(y + "square" + z)
+// function square(x){
+//     return x * x
+// }
+
+
+function displayMessage (x, func){
+    let message = func(x)
+    document.write(message)
+}
+function welcomeMessage(time){
+    if(time < 12){
+        return "good morning"
+    } else {
+        return "good evening"
+    }
+}
+
+displayMessage(13, welcomeMessage)
+
+
+function getComputerChose(){
+    const choices =["rock", "paper", "scissors"]
+    const randomIndex = Math.floor(Math.random() * choices.length)
+    return choices[randomIndex]
+}
+
+function calculateWinner(playerChose, ComputersChoice){
+    alert("final choices " + playerChose + " " + ComputersChoice )
+
+}
+
+function startGame(){
+    const playerChose = prompt("choose rock, paper, scissors")
+    const ComputersChoice = getComputerChose()
+    alert("Computer chose:" + ComputersChoice)
+    calculateWinner(playerChose, ComputersChoice)
+    alert(playerChose + ComputersChoice)
+}
+
+startGame()
